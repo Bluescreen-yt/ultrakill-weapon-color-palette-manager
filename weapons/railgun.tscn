@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://m2u6gxxp23ad"]
+
+[ext_resource type="PackedScene" uid="uid://cmmlwl7mhp1ed" path="res://raw_assets/railgun/Railgun_Main_Low.glb" id="1_g1iwe"]
+[ext_resource type="Shader" uid="uid://c60oxm08mnqyl" path="res://weaponColor.gdshader" id="2_6w08t"]
+[ext_resource type="Texture2D" uid="uid://bbysv5704n4pn" path="res://raw_assets/railgun/Railgun_Main_AlphaGlow.png" id="3_nanbu"]
+[ext_resource type="Texture2D" uid="uid://bqx3a75nmwthk" path="res://raw_assets/railgun/T_Railgun_ID.png" id="4_igrko"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ax4m4"]
+render_priority = 0
+shader = ExtResource("2_6w08t")
+shader_parameter/clr1 = Color(1, 0, 0, 0)
+shader_parameter/clr2 = Color(0, 1, 0, 0)
+shader_parameter/clr3 = Color(0, 0, 1, 0)
+shader_parameter/id = ExtResource("4_igrko")
+shader_parameter/emmisive = ExtResource("3_nanbu")
+
+[node name="Node3D" type="Node3D" unique_id=961849296]
+
+[node name="Railgun_Main_Low2" parent="." unique_id=276053990 instance=ExtResource("1_g1iwe")]
+transform = Transform3D(-2.1855695e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.1855695e-09, 0, 0, 0)
+
+[node name="SubMesh_0" parent="Railgun_Main_Low2/Railgun_Main_Low" parent_id_path=PackedInt32Array(276053990, 1277032763) index="0" unique_id=1906837548]
+material_override = SubResource("ShaderMaterial_ax4m4")
+
+[editable path="Railgun_Main_Low2"]
