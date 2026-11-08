@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://urdp8xie0mgf"]
+
+[ext_resource type="PackedScene" uid="uid://darw0au4fst1s" path="res://raw_assets/nailgun/Nailgun New_0.glb" id="1_e6qm2"]
+[ext_resource type="Shader" uid="uid://c60oxm08mnqyl" path="res://weaponColor.gdshader" id="2_weasf"]
+[ext_resource type="Texture2D" uid="uid://clfdsh8ishvru" path="res://raw_assets/nailgun/Nailgun_Glow.png" id="3_6tpn8"]
+[ext_resource type="Texture2D" uid="uid://dpr3n4m66sq03" path="res://raw_assets/nailgun/T_NailgunNew_ID.png" id="4_8vhrs"]
+[ext_resource type="PackedScene" uid="uid://or2vqw0w73gr" path="res://raw_assets/nailgun/Nailgun Overheat.glb" id="5_weasf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nluhp"]
+render_priority = 0
+shader = ExtResource("2_weasf")
+shader_parameter/clr1 = Color(1, 0, 0, 0)
+shader_parameter/clr2 = Color(0, 1, 0, 0)
+shader_parameter/clr3 = Color(0, 0, 1, 0)
+shader_parameter/id = ExtResource("4_8vhrs")
+shader_parameter/emmisive = ExtResource("3_6tpn8")
+
+[node name="Node3D" type="Node3D" unique_id=878153849]
+
+[node name="Nailgun New_0" parent="." unique_id=1460728338 instance=ExtResource("1_e6qm2")]
+transform = Transform3D(50, 0, 0, 0, -2.1855694e-06, 50, 0, -50, -2.1855694e-06, 0, 0.06874132, -0.037041903)
+
+[node name="SubMesh_0" parent="Nailgun New_0/Nailgun New" parent_id_path=PackedInt32Array(1460728338, 1999889452) index="0" unique_id=401425214]
+material_override = SubResource("ShaderMaterial_nluhp")
+
+[node name="Nailgun Overheat2" parent="." unique_id=439996870 instance=ExtResource("5_weasf")]
+transform = Transform3D(-3, 4.5298745e-07, -1.980071e-14, -4.5298748e-07, -3, 2.6226832e-07, 1.980071e-14, 2.6226832e-07, 3, -1.6331271, -1.0370419, -1.0687413)
+
+[node name="Barrel_L" parent="Nailgun Overheat2/Nailgun Overheat/Nailgun New New/Armature/Main" parent_id_path=PackedInt32Array(439996870, 937506632) index="0" unique_id=58314388]
+material_override = SubResource("ShaderMaterial_nluhp")
+
+[node name="Barrel_L (1)" parent="Nailgun Overheat2/Nailgun Overheat/Nailgun New New/Armature/Main/Barrel_L" index="0" unique_id=1624390720]
+visible = false
+
+[node name="Barrel_R" parent="Nailgun Overheat2/Nailgun Overheat/Nailgun New New/Armature/Main" parent_id_path=PackedInt32Array(439996870, 937506632) index="1" unique_id=580939055]
+material_override = SubResource("ShaderMaterial_nluhp")
+
+[node name="Barrel_R (1)" parent="Nailgun Overheat2/Nailgun Overheat/Nailgun New New/Armature/Main/Barrel_R" index="0" unique_id=1069901647]
+visible = false
+
+[editable path="Nailgun New_0"]
+[editable path="Nailgun Overheat2"]

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cpmdjrlqx6eb6"]
+
+[ext_resource type="PackedScene" uid="uid://cqrkgw7lgvntt" path="res://raw_assets/rocketlauncher/RocketLauncher_0.glb" id="1_bv2no"]
+[ext_resource type="Shader" uid="uid://c60oxm08mnqyl" path="res://weaponColor.gdshader" id="2_6s8w7"]
+[ext_resource type="Texture2D" uid="uid://cs1s01k07vace" path="res://black.png" id="3_7isn8"]
+[ext_resource type="Texture2D" uid="uid://gd07pnsknnfd" path="res://raw_assets/rocketlauncher/T_RocketLauncher_ID.png" id="4_37ouw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_brmsg"]
+render_priority = 0
+shader = ExtResource("2_6s8w7")
+shader_parameter/clr1 = Color(1, 0, 0, 0)
+shader_parameter/clr2 = Color(0, 1, 0, 0)
+shader_parameter/clr3 = Color(0, 0, 1, 0)
+shader_parameter/id = ExtResource("4_37ouw")
+shader_parameter/emmisive = ExtResource("3_7isn8")
+
+[node name="Node3D" type="Node3D" unique_id=23710531]
+
+[node name="RocketLauncher_0" parent="." unique_id=764726579 instance=ExtResource("1_bv2no")]
+transform = Transform3D(-2.1855695e-07, -5, -2.1855695e-07, 0, -2.1855695e-07, 5, -5, 2.1855695e-07, 9.553427e-15, 0, 0, 0)
+
+[node name="SubMesh_0" parent="RocketLauncher_0/RocketLauncher" parent_id_path=PackedInt32Array(764726579, 432473956) index="0" unique_id=1143950292]
+material_override = SubResource("ShaderMaterial_brmsg")
+
+[editable path="RocketLauncher_0"]

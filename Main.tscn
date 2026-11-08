@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://b233h2p5fs03u"]
+
+[ext_resource type="PackedScene" uid="uid://bufvilo1tvoqa" path="res://weapons/alt_revolver.tscn" id="1_lgr22"]
+[ext_resource type="PackedScene" uid="uid://drosgl8pga2n3" path="res://weapons/impacthammer.tscn" id="2_trn2v"]
+[ext_resource type="PackedScene" uid="uid://urdp8xie0mgf" path="res://weapons/nailgun.tscn" id="3_03owx"]
+[ext_resource type="PackedScene" uid="uid://m2u6gxxp23ad" path="res://weapons/railgun.tscn" id="4_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://cpmdjrlqx6eb6" path="res://weapons/rocketlauncher.tscn" id="5_20pc6"]
+[ext_resource type="PackedScene" uid="uid://b0akvysu4o00a" path="res://weapons/sawblade.tscn" id="6_5vvyt"]
+[ext_resource type="PackedScene" uid="uid://cex8ard0mgkaj" path="res://weapons/shotgun.tscn" id="7_c6i3y"]
+[ext_resource type="Script" uid="uid://b4undtduwyk0a" path="res://camera_rotate.gd" id="8_trn2v"]
+[ext_resource type="Texture2D" uid="uid://4aibuokueyta" path="res://fakeskywall-marked.png" id="9_03owx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pbnwl"]
+viewport_path = NodePath("PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_03owx"]
+panorama = ExtResource("9_03owx")
+
+[sub_resource type="Sky" id="Sky_trn2v"]
+sky_material = SubResource("PanoramaSkyMaterial_03owx")
+
+[sub_resource type="Environment" id="Environment_trn2v"]
+background_mode = 2
+background_energy_multiplier = 0.41
+sky = SubResource("Sky_trn2v")
+ambient_light_source = 2
+ambient_light_color = Color(0.20080021, 0.3203293, 1, 1)
+ambient_light_energy = 5.92
+tonemap_mode = 4
+glow_enabled = true
+glow_intensity = 3.72
+glow_bloom = 0.04
+glow_hdr_threshold = 2.82
+glow_hdr_scale = 2.65
+
+[node name="Control" type="Control" unique_id=535707984]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1716647415]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1551016225]
+layout_mode = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 75
+
+[node name="HFlowContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1027659684]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/HFlowContainer" unique_id=1968862304]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer" unique_id=82082531]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer" unique_id=1681813595]
+layout_mode = 2
+texture = SubResource("ViewportTexture_pbnwl")
+
+[node name="SubViewport" type="SubViewport" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect" unique_id=2063486674]
+
+[node name="Node3D" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=1864577683 instance=ExtResource("1_lgr22")]
+visible = false
+
+[node name="Node3D2" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=777633654 instance=ExtResource("2_trn2v")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Node3D3" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=878153849 instance=ExtResource("3_03owx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48821902, 0, 0)
+visible = false
+
+[node name="Node3D4" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=961849296 instance=ExtResource("4_wkp8b")]
+visible = false
+
+[node name="Node3D5" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=23710531 instance=ExtResource("5_20pc6")]
+visible = false
+
+[node name="Node3D6" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=2141598509 instance=ExtResource("6_5vvyt")]
+visible = false
+
+[node name="Node3D7" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=749878292 instance=ExtResource("7_c6i3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23219109, 0, 0)
+visible = false
+
+[node name="CameraRoot" type="Node3D" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=479706400]
+script = ExtResource("8_trn2v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport/CameraRoot" unique_id=2134092737]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 3, 0)
+light_energy = 2.0
+shadow_enabled = true
+shadow_blur = 0.043
+
+[node name="Camera3D" type="Camera3D" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport/CameraRoot" unique_id=1968178943]
+transform = Transform3D(0.5, 0.22414392, -0.83651626, 0, 0.9659258, 0.2588191, 0.86602545, -0.12940955, 0.48296288, -4, 1, 4)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="PanelContainer/MarginContainer/HFlowContainer/PanelContainer/AspectRatioContainer/TextureRect/SubViewport" unique_id=1597147778]
+environment = SubResource("Environment_trn2v")

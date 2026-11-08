@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cex8ard0mgkaj"]
+
+[ext_resource type="PackedScene" uid="uid://dn2i7vofvyvef" path="res://raw_assets/shotgun/Shotgun_New_1.glb" id="1_ajl80"]
+[ext_resource type="Shader" uid="uid://c60oxm08mnqyl" path="res://weaponColor.gdshader" id="2_fyfo2"]
+[ext_resource type="Texture2D" uid="uid://cs1s01k07vace" path="res://black.png" id="3_abh1w"]
+[ext_resource type="Texture2D" uid="uid://bary6pd6ct1xi" path="res://raw_assets/shotgun/T_ShotgunNew_ID.png" id="4_ygfor"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3wis8"]
+render_priority = 0
+shader = ExtResource("2_fyfo2")
+shader_parameter/clr1 = Color(1, 0, 0, 0)
+shader_parameter/clr2 = Color(0, 1, 0, 0)
+shader_parameter/clr3 = Color(0, 0, 1, 0)
+shader_parameter/id = ExtResource("4_ygfor")
+shader_parameter/emmisive = ExtResource("3_abh1w")
+
+[node name="Node3D" type="Node3D" unique_id=749878292]
+
+[node name="Shotgun_New_1" parent="." unique_id=771917807 instance=ExtResource("1_ajl80")]
+transform = Transform3D(-1.9812896e-08, -1.3617324e-08, -0.55, -0.31152806, 0.45326623, 0, 0.45326623, 0.31152806, -2.4041263e-08, 0, 0, 0)
+
+[node name="SubMesh_0" parent="Shotgun_New_1/Shotgun_New" parent_id_path=PackedInt32Array(771917807, 97273188) index="0" unique_id=167963598]
+material_override = SubResource("ShaderMaterial_3wis8")
+
+[editable path="Shotgun_New_1"]

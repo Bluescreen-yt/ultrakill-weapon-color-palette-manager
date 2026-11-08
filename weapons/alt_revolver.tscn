@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bufvilo1tvoqa"]
+
+[ext_resource type="PackedScene" uid="uid://c8u56k00l0n4h" path="res://raw_assets/minosrevolver/MinosRevolver_0.glb" id="1_ej2t6"]
+[ext_resource type="Shader" uid="uid://c60oxm08mnqyl" path="res://weaponColor.gdshader" id="2_6sb6i"]
+[ext_resource type="Texture2D" uid="uid://0xp74bv03vg1" path="res://raw_assets/minosrevolver/T_MinosRevolver_128_Emissive.png" id="3_uta2u"]
+[ext_resource type="Texture2D" uid="uid://im07uxkksqof" path="res://raw_assets/minosrevolver/T_MinosRevolver_ID.png" id="4_m1lm2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mlwff"]
+render_priority = 0
+shader = ExtResource("2_6sb6i")
+shader_parameter/clr1 = Color(1, 0, 0, 0)
+shader_parameter/clr2 = Color(0, 1, 0, 0)
+shader_parameter/clr3 = Color(0, 0, 1, 0)
+shader_parameter/id = ExtResource("4_m1lm2")
+shader_parameter/emmisive = ExtResource("3_uta2u")
+
+[node name="Node3D" type="Node3D" unique_id=1864577683]
+
+[node name="MinosRevolver_0" parent="." unique_id=1365037767 instance=ExtResource("1_ej2t6")]
+transform = Transform3D(35, 0, 0, 0, -1.5298986e-06, 35, 0, -35, -1.5298986e-06, 0, 0, 0)
+
+[node name="SubMesh_0" parent="MinosRevolver_0/MinosRevolver" parent_id_path=PackedInt32Array(1365037767, 2122416634) index="0" unique_id=1575760475]
+material_override = SubResource("ShaderMaterial_mlwff")
+
+[editable path="MinosRevolver_0"]

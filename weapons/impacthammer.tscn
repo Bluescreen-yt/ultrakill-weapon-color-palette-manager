@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://drosgl8pga2n3"]
+
+[ext_resource type="PackedScene" uid="uid://bppk528v2u2bf" path="res://raw_assets/impacthammer/ImpactHammer_0.glb" id="1_emnnw"]
+[ext_resource type="Shader" uid="uid://c60oxm08mnqyl" path="res://weaponColor.gdshader" id="2_hlexk"]
+[ext_resource type="Texture2D" uid="uid://cm44s6cbqeigw" path="res://raw_assets/impacthammer/T_ImpactHammer_Glow.png" id="3_so3b3"]
+[ext_resource type="Texture2D" uid="uid://eh38q5oryyo3" path="res://raw_assets/impacthammer/T_ImpactHammer_ID.png" id="4_de8b5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8dwpb"]
+render_priority = 0
+shader = ExtResource("2_hlexk")
+shader_parameter/clr1 = Color(1, 0, 0, 0)
+shader_parameter/clr2 = Color(0, 1, 0, 0)
+shader_parameter/clr3 = Color(0, 0, 1, 0)
+shader_parameter/id = ExtResource("4_de8b5")
+shader_parameter/emmisive = ExtResource("3_so3b3")
+
+[node name="Node3D" type="Node3D" unique_id=777633654]
+
+[node name="ImpactHammer_0" parent="." unique_id=1045298175 instance=ExtResource("1_emnnw")]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, -4)
+
+[node name="SubMesh_0" parent="ImpactHammer_0/ImpactHammer" parent_id_path=PackedInt32Array(1045298175, 1506528966) index="0" unique_id=2117121794]
+material_override = SubResource("ShaderMaterial_8dwpb")
+
+[editable path="ImpactHammer_0"]
