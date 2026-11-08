@@ -20,6 +20,7 @@ void fragment() {
 	}
 	
 	ALBEDO = final_color.rgb;
+	ROUGHNESS = final_color.a;
 	ALBEDO *= vec3(ID.a);
 	EMISSION = texture(emmisive, UV).rgb*texture(emmisive, UV).a*2.;
 	
