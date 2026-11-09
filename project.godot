@@ -13,13 +13,19 @@ config_version=5
 config/name="UltrakillWeaponsColorManager"
 run/main_scene="uid://b233h2p5fs03u"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/stretch_mode=2
+boot_splash/image="uid://d0a1ki5b0qlfd"
+config/icon="uid://cb3spqwk1ijmb"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-window/stretch/scale_mode="integer"
+window/stretch/scale=0.75
+
+[dotnet]
+
+project/assembly_name="UltrakillWeaponsColorManager"
 
 [gui]
 

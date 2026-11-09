@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://vodprbsfqfg3"]
+
+[node name="color_popup" type="Control" unique_id=914166037]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1341429909]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.50980395)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1240490742]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=351824131]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1446229013]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ColorPicker" type="ColorPicker" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=535344025]
+layout_mode = 2
+edit_intensity = false
+color_mode = 1
+picker_shape = 1
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+presets_visible = false
